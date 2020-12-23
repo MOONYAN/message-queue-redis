@@ -1,0 +1,29 @@
+version: "3"
+
+networks: 
+    mqnetwork:
+        driver: bridge
+
+services: 
+    broker:
+        networks:
+          - mqnetwork
+        restart: always
+        container_name: mq.broker
+        image: redis:6.0
+        ports: 
+          - 6379:6379
+        volumes: 
+          - /data/redis-data:/data
+        command: redis-server
+
+    consumer: 
+        networks: 
+          - mqnetwork
+        container_name: mq.client
+        image: redis:6.0
+        depends_on: 
+          - broker
+        stdin_open: true
+        tty: true
+        command: redis-cli -h broker ping
