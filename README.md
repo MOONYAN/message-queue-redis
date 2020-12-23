@@ -13,6 +13,10 @@ As a sample for practicing Message Queue with Redis
 - subscribe to channel
 - publish message to channel
 
+## Skill
+
+- [Docker image Redis](https://hub.docker.com/_/redis) version 6.0
+
 ## Architecture
 ![](demo/message-queue.png)
 
@@ -35,16 +39,12 @@ publish <channel> message
 ## Demo Script
 ```
 subscribe naruto
-```
-```
+
 subscribe kuroko naruto
-```
-```
+
 publish naruto sasuke
-```
-```
+
 publish kuroku kagami
-```
-```
+
 publish kuroku aomine
 ```
