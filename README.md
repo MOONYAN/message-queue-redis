@@ -13,6 +13,9 @@ As a sample for practicing Message Queue with Redis
 - subscribe to channel
 - publish message to channel
 
+## Architecture
+![](demo/message-queue.png)
+
 ## Launch borker in Docker
 ```
 docker-compose up
