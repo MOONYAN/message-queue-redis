@@ -33,7 +33,7 @@ docker exec -it mq.broker redis-cli
 subscribe <channel>
 ```
 ```
-publish <channel> message
+publish <channel> <message>
 ```
 
 ## Demo Script
